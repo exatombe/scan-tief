@@ -178,11 +178,11 @@ export default function HomeScreen({navigation}) {
   return (
     <Layout style={{flex: 1}}>
       <TopNavigationAccessoriesShowcase />
-     <Divider style={{height: 15, backgroundColor: null}} />
         <List
       data={update}
       renderItem={DisplayManga}
       ListHeaderComponent={ hotSale.length >0 ? <Layout>
+        <Divider style={{height: 15, backgroundColor: null}} />
         <Text category={'h6'} style={{left: 15, fontWeight: 'bold'}}>
           Mise à jour des manga populaires
         </Text>
