@@ -9,7 +9,7 @@ workflows:
                 XCODE_SCHEME: "scantief.app" # <-- Put the name of your Xcode scheme here
                 BUNDLE_ID: "com.scantief" # <-- Put your Bundle Id here e.g com.domain.myapp
             node: latest
-            xcode: 10.3
+            xcode: 11.0
             cocoapods: default
         triggering:
             events:
