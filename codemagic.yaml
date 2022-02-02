@@ -28,7 +28,7 @@ workflows:
             - name: Install CocoaPods dependencies
               script: |
                 cd ios && pod install && cd ..
-             - name: Install vectorIcons
+            - name: Install vectorIcons
               script: |
                 yarn install react-native-vector-icons
                 npx react-native link react-native-vector-icons
