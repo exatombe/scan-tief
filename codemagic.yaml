@@ -9,7 +9,7 @@ workflows:
                 XCODE_SCHEME: "scantief.app" # <-- Put the name of your Xcode scheme here
                 BUNDLE_ID: "com.scantief" # <-- Put your Bundle Id here e.g com.domain.myapp
             node: latest
-            xcode: 11.0
+            xcode: 11.7
             cocoapods: default
         triggering:
             events:
@@ -24,10 +24,14 @@ workflows:
             - name: Install npm dependencies
               script: |
                 yarn install
-                npx react-native link
+                yarn remove react-native-vector-icons
             - name: Install CocoaPods dependencies
               script: |
-                cd ios && pod install
+                cd ios && pod install && cd ..
+             - name: Install vectorIcons
+              script: |
+                yarn install react-native-vector-icons
+                npx react-native link react-native-vector-icons
             - name: Build App
               script: |
                 npx react-native run-ios --configuration Release
