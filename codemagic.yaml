@@ -28,18 +28,9 @@ workflows:
             - name: Install CocoaPods dependencies
               script: |
                 cd ios && pod install
-            - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+            - name: Build App
               script: |
-                keychain initialize
-            - name: Use system default keychain
-              script: |
-                keychain add-certificates
-            - name: Set up code signing settings on Xcode project
-              script: |
-                xcode-project use-profiles --warn-only
-            - name: Build ipa for distribution
-              script: |
-                xcode-project build-ipa --workspace "$FCI_BUILD_DIR/ios/$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME" 
+                npx react-native run-ios --configuration Release
         artifacts:
             - build/ios/ipa/*.ipa
             - /tmp/xcodebuild_logs/*.log
