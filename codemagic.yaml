@@ -31,7 +31,6 @@ workflows:
             - name: Install vectorIcons
               script: |
                 yarn add react-native-vector-icons
-                npx react-native link react-native-vector-icons
             - name: Build App
               script: |
                 npx react-native run-ios --configuration Release
