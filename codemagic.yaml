@@ -23,7 +23,8 @@ workflows:
         scripts:
             - name: Install npm dependencies
               script: |
-                yarn add
+                yarn install
+                yarn link
             - name: Install CocoaPods dependencies
               script: |
                 cd ios && pod install
