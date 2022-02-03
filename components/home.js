@@ -12,8 +12,6 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 import { FlatList, ImageBackground, Pressable} from 'react-native';
 
 
@@ -115,7 +113,9 @@ export default function HomeScreen({navigation}) {
         <Button size={'tiny'} status={'basic'} accessoryLeft={ShowIcon} onPress={()=>{
           navigation.push("Chapter",{
             url: item.srcChapter,
-            title: "Chapitre " + item.chapter_name
+            title: "Chapitre " + item.chapter_name,
+            srcURL: item.srcURL,
+            name: item.name
         })
         }}>
           <Text category={'h5'} status={'primary'}>
@@ -133,7 +133,7 @@ export default function HomeScreen({navigation}) {
         marginBottom:5
       }} >
       <Pressable onPress={() => navigation.push("Fiche",{ title: item.scanName, url: item.url}) }>
-        <Text size={"s1"}><MaterialCommunityIcons name="book" size={26} />
+        <Text size={"s1"}><Icon name="book" size={26} />
             {item.scanName} | {item.date.trim()}</Text>
       </Pressable>
         </Layout> 
@@ -143,7 +143,9 @@ export default function HomeScreen({navigation}) {
           marginLeft: 10,
         }} onPress={()=> navigation.push("Chapter",{
           url: e.url,
-          title: e.name
+          title: e.name,
+          srcURL: item.url,
+          name: item.scanName
       })}>
            {e.name}
       </Button>

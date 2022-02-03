@@ -22,6 +22,7 @@ import HomeScreen from './components/home';
 import Profile from './components/profile';
 import Fiche from './components/fiche';
 import ChapterDisplay from './components/chapter'
+import Favorites from './components/favoris'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 /**
@@ -54,20 +55,16 @@ function Home(){
       ),
     }}
   />
-  <Tab.Screen
-    name="Profile"
-    component={Profile}
-    options={{
-      tabBarLabel: 'Profile',
-      tabBarIcon: ({color}) => (
-        <MaterialCommunityIcons
-          name="account"
-          color={color}
-          size={26}
-        />
-      ),
-    }}
-  />
+<Tab.Screen
+  name="Favoris"
+  component={Favorites}
+  options={{
+    tabBarLabel: 'Favorites',
+    tabBarIcon: ({color}) => (
+      <MaterialCommunityIcons name="heart" color={color} size={26} />
+    ),
+  }}
+/>
 </Tab.Navigator>)
 }
 
