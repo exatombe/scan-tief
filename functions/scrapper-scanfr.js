@@ -2,7 +2,6 @@ import cheerio from "cheerio";
 
 import {parse} from 'himalaya';
 
-import { Image } from 'react-native'
 export async function scrapMainPage(){
    let body = await fetch(`https://scan-fr.cc?t=${Date.now()}`)
    let html = await body.text();
