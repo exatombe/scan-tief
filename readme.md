@@ -4,9 +4,9 @@ Scan-Tief est une application développé avec react-native afin de lire des man
 
 ## Installation
 
-- [#ANDROID](Android)
+- [https://github.com/garder500/scan-tief#android](Android)
 
-- [#](IOS)
+- [https://github.com/garder500/scan-tief#ios](IOS)
 
 ## ANDROID
 
@@ -17,7 +17,7 @@ Installé au préalalble pour Window
 - [https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi](NodeJs)
 
 Depuis un CMD/PowerShell(Terminal) effectuer
-```bash
+```sh
 npm i -g yarn
 yarn install
 ```
@@ -31,7 +31,7 @@ Vous devrez effectué cette manipulation en supplément si vous souhaitez démar
 
 Depuis un terminal à nouveau :
 
-```bash
+```sh
 keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 ```
 Vous devez generé une clé de signature, cette commande en crée une avec une validité de 10 000 jours.
