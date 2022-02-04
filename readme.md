@@ -4,17 +4,17 @@ Scan-Tief est une application développé avec react-native afin de lire des man
 
 ## Installation
 
-- [https://github.com/garder500/scan-tief#android](Android)
+- [Android](https://github.com/garder500/scan-tief#android)
 
-- [https://github.com/garder500/scan-tief#ios](IOS)
+- [IOS](https://github.com/garder500/scan-tief#ios)
 
 ## ANDROID
 
 L'installation sur android ce passe comme suit :
 Installé au préalalble pour Window
-- [https://redirector.gvt1.com/edgedl/android/studio/install/2021.1.1.21/android-studio-2021.1.1.21-windows.exe](Android Studio) 
+- [Android Studio](https://redirector.gvt1.com/edgedl/android/studio/install/2021.1.1.21/android-studio-2021.1.1.21-windows.exe) 
 
-- [https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi](NodeJs)
+- [NodeJs](https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi)
 
 Depuis un CMD/PowerShell(Terminal) effectuer
 ```sh
