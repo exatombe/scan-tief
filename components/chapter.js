@@ -147,7 +147,7 @@ async function makeFavorite(status){
 		}
 		</style>
         <div id="container">
-  ${images.map(e => '<img width="100%" height="auto" src="'+ e.url +'" />').join("")}
+  ${images.map(e => '<img width="100%" height="auto" loading="lazy" src="'+ (e.url.startsWith("https") ? e.url : "https:" + e.url) +'" />').join("")}
   </div>
 </body>`}}
 javaScriptEnabled={true}
